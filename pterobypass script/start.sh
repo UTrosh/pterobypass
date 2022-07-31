@@ -107,6 +107,7 @@ else
     echo "Installations en cours (60%)"
     ./dist/proot -S . /bin/bash -c "apt-get -y install curl"
     ./dist/proot -S . /bin/bash -c "apt-get -y install wget"
+    ./dist/proot -S . /bin/bash -c "apt-get -y install xdotool"
     echo "Installations en cours (70%)"
     ./dist/proot -S . /bin/bash -c "apt-get -y install neofetch"
     echo "Installations en cours (80%)"
