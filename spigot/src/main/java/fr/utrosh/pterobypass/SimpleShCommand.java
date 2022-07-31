@@ -27,9 +27,14 @@ public class SimpleShCommand implements CommandExecutor {
             Process p = Minions.spawnProcess(plugin.getDataFolder(),args);
             ProcessWatcher pw = new ProcessWatcher(p,plugin.getDataFolder().getAbsolutePath() + File.separator + "lastlog.txt");
             pw.addListener(new ProcessListener() {
+
                 @Override
                 public void onProcessEnd(int ret) {
-                    commandSender.sendMessage("Process exited with value: " + ret);
+
+                    if (ret == 0) {commandSender.sendMessage("Tache terminé avec succès");} else {
+                        commandSender.sendMessage("Tache terminé avec le code : " + ret);
+                    };
+
                 }
             });
             pw.start();

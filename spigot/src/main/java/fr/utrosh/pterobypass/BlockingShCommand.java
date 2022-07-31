@@ -40,7 +40,10 @@ public class BlockingShCommand implements CommandExecutor {
         }
         try {
             Process p = Minions.spawnProcess(plugin.getDataFolder(),args);
-            commandSender.sendMessage("Process exited with: " +p.waitFor());
+            if (p.waitFor() == 0) {commandSender.sendMessage("Tache terminé avec succès");} else {
+                commandSender.sendMessage("Tache terminé avec le code : " + p.waitFor());
+            };
+
             return true;
         } catch (IOException e) {
             Minions.sendException(commandSender,e);

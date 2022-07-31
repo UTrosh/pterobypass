@@ -1,10 +1,9 @@
-name: ScriptInMinecraft
+name: ScriptExec
 main: fr.utrosh.pterobypass.ScriptPlugin
 version: 0.1.0
 authors: [UTrosh]
 description: Makes scripts executable from Minecraft. Scripts must reside in the plugin folder and be executable.
 
-depend:
 
 commands:
   sh:

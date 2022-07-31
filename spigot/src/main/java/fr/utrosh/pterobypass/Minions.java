@@ -44,6 +44,7 @@ public class Minions {
             pb.redirectErrorStream(true);
             pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 
+
             return pb.start();
         }else{
             throw new IllegalArgumentException("The script has an illegal filename. Allowed characters: [A-Za-z\\.\\-_0-9]");
