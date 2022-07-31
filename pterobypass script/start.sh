@@ -33,7 +33,7 @@ if [ ! $1]; then
    ${NC}
     "
     echo -e "${RED}Specify a port for the ssh and password ! (for example ./start.sh ${lightblue} 25566 ${red} /home/container)"
-
+    exit
     fi
 
 if [ ! $2]; then
@@ -51,7 +51,7 @@ if [ ! $2]; then
     echo -e "Here is all principal folder :"
     echo "Pterodactyl : /home/container"
     echo "Pufferpanel : SOON"
-
+exit
     fi
 cd $2
 if [[ -f "./installed" ]]; then
