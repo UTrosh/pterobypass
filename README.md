@@ -21,7 +21,7 @@ Are example are for pterodactyl
 cd /home/container
 
 
-./dist/proot -S ./bin/bash -c "service dropbear start"
+./dist/proot -S . /bin/bash -c "service dropbear start"
 ```
 
 ## How it work?
@@ -36,7 +36,7 @@ and the second define where is the bash bin.
 
 Then if we want to execute bash command, we need this line
 ``` 
-./dist/proot -S ./bin/bash -c "echo "My beautiful script" "
+./dist/proot -S . /bin/bash -c "echo "My beautiful script" "
 ```
 
 The first word define that we use root, and the second word define bash command
